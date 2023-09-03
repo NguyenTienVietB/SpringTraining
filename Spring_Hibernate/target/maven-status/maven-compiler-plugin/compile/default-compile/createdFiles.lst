@@ -1,0 +1,3 @@
+org\example\App.class
+org\example\entities\Customer.class
+org\example\dao\CustomerDAO.class

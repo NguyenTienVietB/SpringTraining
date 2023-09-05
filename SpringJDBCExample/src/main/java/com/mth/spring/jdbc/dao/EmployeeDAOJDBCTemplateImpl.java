@@ -41,7 +41,7 @@ public class EmployeeDAOJDBCTemplateImpl implements EmployeeDAO {
 		String query = "select * from Employee where id = ?";
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		
-		//using RowMapper anonymous class, we can create a separate RowMapper for reuse
+		
 		Employee emp = jdbcTemplate.queryForObject(query, new Object[]{id}, new RowMapper<Employee>(){
 
 			@Override

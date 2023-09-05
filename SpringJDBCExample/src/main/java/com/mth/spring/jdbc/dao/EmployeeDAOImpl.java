@@ -49,7 +49,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 	@Override
 	public Employee getById(int id) {
-		String query = "select name, salary from Employee where id = ?";
+		String query = "select first_name, last_name, salary from Employee where id = ?";
 		Employee emp = null;
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -85,7 +85,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 	@Override
 	public void update(Employee employee) {
-		String query = "update Employee set name=?, salary=? where id=?";
+		String query = "update Employee set first_name=?, last_name=?, salary=? where id=?";
 		Connection con = null;
 		PreparedStatement ps = null;
 		try{
